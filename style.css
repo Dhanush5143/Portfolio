@@ -60,11 +60,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: #f8f9fa; /* Optional background color */
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    padding: 0; /* Remove default padding */
 }
 
 .nav-links li {
@@ -73,6 +75,15 @@ nav {
 
 .menu-toggle {
     display: none;
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 24px; /* Adjust font size for visibility */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Styles for better accessibility */
+.menu-toggle:focus {
+    outline: 2px solid #007bff; /* Add focus outline */
 }
 
 @media (max-width: 768px) {
@@ -85,6 +96,7 @@ nav {
         width: 100%;
         background-color: white; /* or your preferred background */
         z-index: 1000;
+        transition: max-height 0.3s ease-in-out; /* Smooth transition */
     }
 
     .nav-links.active {
@@ -95,6 +107,8 @@ nav {
         display: block; /* Show menu toggle button */
     }
 }
+
+
 /* Dark/Light Mode Switcher */
 #mode-switch {
     background-color: transparent;
