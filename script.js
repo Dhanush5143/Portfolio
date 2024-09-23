@@ -58,8 +58,3 @@ contactForm.addEventListener('submit', (e) => {
     contactForm.reset();
 });
 
-
-document.getElementById('menu-toggle').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links'); // Replace with your actual nav links selector
-    navLinks.classList.toggle('active'); // Toggle class to show/hide links
-});
