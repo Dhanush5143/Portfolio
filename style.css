@@ -55,16 +55,6 @@ header {
     width: auto; /* Maintain aspect ratio */
 }
 
-.menu-toggle {
-    display: none; /* Hide by default */
-}
-
-@media (max-width: 768px) { /* Adjust the width as needed */
-    .menu-toggle {
-        display: block; /* Show button on small screens */
-    }
-}
-
 nav {
     display: flex;
     justify-content: space-between;
