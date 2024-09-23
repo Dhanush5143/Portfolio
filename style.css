@@ -1,0 +1,261 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Professional Font */
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #1b1b1b; /* Dark background */
+    color: #fff; /* Light text */
+    line-height: 1.6;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h2 {
+    color: #f39c12;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+section {
+    padding: 5rem 2rem;
+}
+p {
+    margin-bottom: 1rem;
+    color: #d3d3d3; /* Dark mode section text color */
+}
+
+/* Wrapper for Flexbox Layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Main content styling */
+main {
+    flex: 1; /* Allows the main content to grow and take available space */
+}
+
+/* Header */
+header {
+    background-color: #222;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    max-height: 50px; /* Adjust as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-links li {
+    padding: 0.5rem 1rem;
+}
+.nav-links a:hover {
+    color: #f39c12;
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Dark/Light Mode Switcher */
+#mode-switch {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.light-mode #mode-switch {
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #f39c12;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #d3d3d3; /* Dark mode text */
+}
+
+/* About Section */
+.about {
+    text-align: center;
+}
+.about p {
+    max-width: 800px;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Projects Section */
+.projects {
+    text-align: center;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.project-item {
+    background-color: #2e2e2e; /* Dark mode item background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+.project-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #f39c12;
+}
+.project-item p {
+    color: #bdbdbd; /* Dark mode item text */
+}
+
+/* Skills Section */
+.skills {
+    text-align: center;
+}
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.skill-item {
+    background-color: #2e2e2e; /* Dark mode item background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+.skill-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #f39c12;
+}
+.skill-item p {
+    color: #bdbdbd; /* Dark mode item text */
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+}
+.contact p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #d3d3d3; /* Dark mode label color */
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e2e2e; /* Dark mode input background */
+    color: #fff; /* Dark mode input text */
+}
+button[type="submit"] {
+    padding: 0.8rem 2rem;
+    border: none;
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    background-color: #222; /* Dark mode footer background */
+    text-align: center;
+    color: #fff; /* Dark mode footer text */
+}
+
+/* Light Mode */
+.light-mode body {
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text */
+}
+.light-mode header {
+    background-color: #f9f9f9; /* Light mode header */
+}
+.light-mode nav a {
+    color: #333; /* Light mode link color */
+}
+.light-mode .about p, 
+.light-mode .projects p, 
+.light-mode .skills p, 
+.light-mode .contact p {
+    color: #333; /* Light mode section text color */
+}
+.light-mode .project-item, 
+.light-mode .skill-item {
+    background-color: #f0f0f0; /* Light mode item background */
+    color: #333; /* Light mode item text */
+}
+.light-mode input[type="text"], 
+.light-mode input[type="email"], 
+.light-mode textarea {
+    background-color: #f0f0f0; /* Light mode input background */
+    color: #333; /* Light mode input text */
+}
+.light-mode footer {
+    background-color: #f9f9f9; /* Light mode footer background */
+    color: #333; /* Light mode footer text */
+}
