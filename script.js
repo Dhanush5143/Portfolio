@@ -45,15 +45,39 @@ window.addEventListener('load', () => {
     }
 });
 
-
-// Form handling (API integration to be added by Jagdish)
+// Form handling (API integration added)
 const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', (e) => {
+
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    // You will replace this part with API call
-    alert('Form submitted! API integration pending.');
-    
+
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'c010478e-f9ff-429a-a8ee-609135e6102d', // Replace with your Web3Forms API key
+            },
+            body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            console.log('Success:', result);
+            alert('Form submitted successfully!');
+        } else {
+            console.error('Error:', result);
+            alert('Error submitting form. Please try again.');
+        }
+    } catch (error) {
+        console.error('Network error:', error);
+        alert('Network error. Please check your connection.');
+    }
+
     // Clear form fields after submission
     contactForm.reset();
 });
