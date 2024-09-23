@@ -97,3 +97,7 @@ contactForm.addEventListener('submit', async (e) => {
     // Clear form fields after submission
     contactForm.reset();
 });
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Ensure this is working
+});
