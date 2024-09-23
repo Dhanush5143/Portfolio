@@ -59,55 +59,24 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #f8f9fa; /* Optional background color */
+    max-width: 1100px;
+    margin: 0 auto;
 }
-
 .nav-links {
-    display: flex;
     list-style: none;
-    padding: 0; /* Remove default padding */
+    display: flex;
+    gap: 1.5rem;
 }
-
 .nav-links li {
-    margin: 0 15px;
+    padding: 0.5rem 1rem;
 }
-
-.menu-toggle {
-    display: none;
-    background: none; /* Remove default button background */
-    border: none; /* Remove default button border */
-    font-size: 24px; /* Adjust font size for visibility */
-    cursor: pointer; /* Change cursor to pointer */
+.nav-links a:hover {
+    color: #f39c12;
 }
-
-/* Styles for better accessibility */
-.menu-toggle:focus {
-    outline: 2px solid #007bff; /* Add focus outline */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust based on your navbar height */
-        left: 0;
-        width: 100%;
-        background-color: white; /* or your preferred background */
-        z-index: 1000;
-        transition: max-height 0.3s ease-in-out; /* Smooth transition */
-    }
-
-    .nav-links.active {
-        display: flex; /* Show when active */
-    }
-
-    .menu-toggle {
-        display: block; /* Show menu toggle button */
-    }
-}
-
 
 /* Dark/Light Mode Switcher */
 #mode-switch {
